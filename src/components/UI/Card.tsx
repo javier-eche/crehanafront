@@ -1,7 +1,5 @@
 import React from 'react';
-import urlIconLevel from './../../assets/images/bar-chart-2.svg';
-import urlIconPeople from './../../assets/images/people.svg';
-import urlIconScore from './../../assets/images/star.svg';
+import Statistics from './Statistics';
 
 const Card = () => {
   return (
@@ -11,20 +9,7 @@ const Card = () => {
           <div className="flex flex-col leading-tight p-2 md:p-4">
             <h1 className="text-base font-bold mt-1">Nombre del curso</h1>
             <p className="text-sm mt-0.5">Profesor del curso</p>
-            <div className="flex justify-between mt-0.5">
-              <div className="flex items-center gap-1">
-                <img src={urlIconLevel} alt=""/>
-                <p className="text-xs font-bold text-gray-400">Nivel 1</p>
-              </div>
-              <div className="flex items-center gap-1">
-                <img src={urlIconPeople} alt=""/>
-                <p className="text-xs font-bold text-gray-400">123 Usuarios</p>
-              </div>
-              <div className="flex items-center gap-1">
-                <img src={urlIconScore} alt=""/>
-                <p className="text-xs font-bold text-gray-400">4.8</p>
-              </div>
-            </div>
+            <Statistics />
             <div className="flex flex-col mt-3">
               <div className="flex justify-between items-center">
                 <div className="flex items-center">
