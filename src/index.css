@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('./assets/stylesheets/summary.css');
+@import url('./assets/stylesheets/temary.css');
+@import url('./assets/stylesheets/projects_course.css');
+@import url('./assets/stylesheets/progress_bar.css');
+@import url('./assets/stylesheets/rating.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+  --color-gray: #8D8D9D;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.pcb{
+  padding-bottom: 114px;
 }

@@ -1,0 +1,10 @@
+.progress__bar{
+  width: 241px;
+  height: 4px;
+}
+
+.progress_active_bar{
+  width: 100px;
+  height: 4px;
+  background: blue;
+}

@@ -1,0 +1,19 @@
+.big-box{
+  width: 322px;
+  height: 320px;
+  border-radius: 10px;
+}
+
+.small-box{
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.color-gray{
+  background: var(--color-gray);
+}
+
+.text-gray{
+  color: var(--color-gray);
+}
