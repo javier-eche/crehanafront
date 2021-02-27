@@ -1,6 +1,8 @@
 import React from 'react';
 import LevelStarts from './LevelStarts';
 import ProgressBar from './ProgressBar';
+import Questions from './Questions';
+import Testimonial from './Testimonial';
 
 const Ratings = () =>{
   return (
@@ -29,6 +31,8 @@ const Ratings = () =>{
           <LevelStarts nOn={1} nOff={4} />
         </div>
       </div>
+      <Testimonial />
+      <Questions />
     </div>
   );
 }
