@@ -1,0 +1,25 @@
+.box-paid{
+  width: 564px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.box__info-paid{
+  width: 155px;
+  height: 116px;
+  border-radius: 10px;
+}
+
+.box__resume-paid{
+  width: 608px;
+  height: 952px;
+}
+
+.btn__paid{
+  width: 320px;
+  height: 48px;
+}
+
+.px-72px{
+  padding: 0px 72px;
+}

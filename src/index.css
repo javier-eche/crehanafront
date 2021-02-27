@@ -7,12 +7,14 @@
 @import url('./assets/stylesheets/projects_course.css');
 @import url('./assets/stylesheets/progress_bar.css');
 @import url('./assets/stylesheets/rating.css');
-@import url('./assets/stylesheets/testimonial.css');
+@import url('./assets/stylesheets/paid_course.css');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root{
   --color-gray: #8D8D9D;
   --color-primary: #181B32;
+  --color-gray-main: #DFE1E6;
+  --color-gray-lighter: #F6F7F9;
 }
 
 body {
@@ -20,6 +22,62 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
+}
+
+.text-sxl{
+  font-size: 40px;
+}
+
+.pix-5{
+  padding: 5px 0px;
+}
+
+.mt-33{
+  margin-top: 33px;
+}
+
+.mt-26{
+  margin-top: 26px;
+}
+
+.mt-45{
+  margin-top: 45px;
+}
+
+.mt-59{
+  margin-top: 59px;
+}
+
+.bg-dark{
+  background: var(--color-primary);
+}
+
+.bg-gray{
+  background: var(--color-gray);
+}
+
+.text-gray{
+  color: var(--color-gray);
+}
+
+.text-dark{
+  color: var(--color-primary);
+}
+
+.bg-gray-main{
+  background: var(--color-gray-main);
+}
+
+.bg-gray-lighter{
+  background: var(--color-gray-lighter);
+}
+
+.text-gray-main{
+  color: var(--color-gray-main);
+}
+
+.h-72px{
+  height: 72px;
 }
 
 .pcb{
