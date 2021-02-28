@@ -19,7 +19,7 @@ const Card = () => {
                 <p className="text-xs font-normal text-gray-400">CO$164.434</p>                
               </div>
               <div className="mt-3">
-                <button className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-3.5 px-4 rounded">Comprar ahora</button>
+                <button className="w-full bg-dark hover:bg-gray-400 text-white font-bold py-3.5 px-4 rounded">Comprar ahora</button>
               </div>
             </div>
           </div>

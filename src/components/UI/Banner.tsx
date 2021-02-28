@@ -7,7 +7,7 @@ const Banner = () => {
         <h2 className="text-4xl font-black mb-1.5 text-center">Title H2 -</h2>
         <h2 className="text-4xl font-black mb-1.5 text-center">banner cursos nuevos</h2>
       </div>
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Comprar ahora</button>
+      <button className="bg-dark hover:bg-gray-400 text-white font-bold py-2 px-4 rounded">Comprar ahora</button>
     </div>
   );
 }
