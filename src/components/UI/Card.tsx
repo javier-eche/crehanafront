@@ -1,7 +1,9 @@
 import React from 'react';
 import Statistics from './Statistics';
+import {Link} from 'react-router-dom';
 
 interface Props {
+  id:number,
   name:string,
   level:string,
   users:number,
@@ -10,7 +12,7 @@ interface Props {
   real_price:number,
 }
 
-const Card: React.FC<Props> = ({name,level,users,score,price,real_price}) => {
+const Card: React.FC<Props> = ({id, name, level, users, score, price, real_price}) => {
   return (
     <div className="my-1 px-1 w-full md:w-1/3 lg:my-4 lg:px-4 lg:w-1/4">
         <div className="overflow-hidden rounded-lg shadow-lg">
@@ -28,7 +30,9 @@ const Card: React.FC<Props> = ({name,level,users,score,price,real_price}) => {
                 <p className="text-xs font-normal text-gray-400">CO${real_price}</p>                
               </div>
               <div className="mt-3">
-                <button className="w-full bg-dark hover:bg-gray-400 text-white font-bold py-3.5 px-4 rounded">Comprar ahora</button>
+                <Link to={{pathname:`/details/${id}`}}>
+                  <button className="w-full bg-dark hover:bg-gray-400 text-white font-bold py-3.5 px-4 rounded">Comprar ahora</button>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Checkout from './components/pages/Checkout';
 import Details from './components/pages/Details';
 import Home from './components/pages/Home';
@@ -16,9 +17,16 @@ function App(): JSX.Element {
     fetchData();
   }, []);
   return (
-    <div className="container mx-auto px-9 pcb">
-      <Home data = {listData}/>
-    </div>
+    <Router>
+      <div className="container mx-auto px-9 pcb">
+        <Switch>
+          {/* <Home data = {listData}/> */}
+          <Route exact path="/" component={() => <Home data={listData} />}/>
+          <Route exact path="/details/:id" component={Details} />
+          <Route exact path="/checkout" component={Checkout} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

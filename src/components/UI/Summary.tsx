@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Statistics from './Statistics';
 import urlIconHeart from './../../assets/images/heart.svg';
 import urlIconMoon from './../../assets/images/moon.svg';
@@ -49,8 +50,12 @@ const Summary = () => {
             </div>
             <p className="text-2xl font-normal text-gray-400">CO$164.434</p>                
           </div>
+          <Link to="/checkout">
+            <div className="flex flex-col mx-4">
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3.5 rounded">Comprar ahora</button>
+            </div>
+          </Link>
           <div className="flex flex-col mx-4">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3.5 rounded">Comprar ahora</button>
             <button className="bg-transparent mt-2.5 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white p-3.5 border border-blue-500 hover:border-transparent rounded">Agregar al carrito</button>
           </div>
         </div>
