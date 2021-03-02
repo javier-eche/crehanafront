@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProjectsCourse = () =>{
   return (
-    <div className="w-1/2 mt-12">
+    <div className="w-full sm:w-1/2 mt-12">
       <h3 className="text-32px font-black mb-6">H3 - Proyectos del curso</h3>
       <div className="flex gap-5">
         <div className="big-box color-gray"></div>

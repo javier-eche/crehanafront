@@ -3,7 +3,7 @@ import urlIconArrow from './../../assets/images/arrow-ios-down.svg';
 
 const Temary = () =>{
   return (
-    <div>
+    <div className="mt-16 sm:mt-0">
       <h3 className="text-32px font-black mb-6">H3 - Temario del curso</h3>
       <div className="pb-28-75">
         <p className="text-lg font-bold">Introducción</p>
