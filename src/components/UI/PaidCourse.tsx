@@ -5,7 +5,13 @@ import urlImgPaypal from './../../assets/images/image_paypal.png';
 import urlImgPagoEfectivo from './../../assets/images/image_pagoefectivo.png';
 import Statistics from './Statistics';
 
-const PaidCourse = () => {
+interface Props {
+  dataCourse:any,
+}
+
+const PaidCourse: React.FC<Props> = ({dataCourse}) => {
+  const {id, name, level, users, score, price, real_price, discount} = dataCourse;
+
   return (
     <div className="flex">
       <div>
@@ -81,23 +87,23 @@ const PaidCourse = () => {
         <div className="flex mt-45">
           <div className="box__info-paid bg-gray mr-6"></div>
           <div className="flex flex-col justify-center gap-2">
-            <p className="font-bold">Nombre del curso</p>
+            <p className="font-bold">{name}</p>
             <p className="text-sm">Profesor del curso</p>
-            <Statistics />
+            <Statistics level={level} users={users} score={score} />
           </div>
         </div>
         <div className="mt-6">
           <div className="flex justify-between">
             <p className="text-sm">Subtotal</p>
-            <p className="text-sm text-gray">CO$ 199,999</p>
+            <p className="text-sm text-gray">CO$ {real_price}</p>
           </div>
           <div className="flex justify-between mt-2">
             <p className="text-sm">Tarjeta</p>
-            <p className="text-sm text-gray">20% Dto.</p>
+            <p className="text-sm text-gray">Dto. {discount}</p>
           </div>
           <div className="flex justify-between mt-2">
             <p className="text-sm">Total a pagar</p>
-            <p className="text-base font-extrabold text-dark">CO$ 149,999</p>
+            <p className="text-base font-extrabold text-dark">CO$ {price}</p>
           </div>
         </div>
         <div className="mt-59">

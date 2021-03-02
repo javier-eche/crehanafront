@@ -23,7 +23,7 @@ function App(): JSX.Element {
           {/* <Home data = {listData}/> */}
           <Route exact path="/" component={() => <Home data={listData} />}/>
           <Route exact path="/details/:id" component={Details} />
-          <Route exact path="/checkout" component={Checkout} />
+          <Route exact path="/checkout/:id" component={Checkout} />
         </Switch>
       </div>
     </Router>

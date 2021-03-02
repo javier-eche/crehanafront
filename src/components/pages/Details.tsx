@@ -13,21 +13,21 @@ interface Props {
 
 const Details: React.FC<Props> = ({match}) => {
   
-  const [selectedCategory, setSelectedCategory] = useState({});
-  const id = match.params.id;
+  const [selectedCourse, setSelectedCourse]:any = useState({});
+  const idCourse = match.params.id;
 
   useEffect(() => {
     const fetchCourse = async() => {
-      const { data } = await Axios.get(`http://127.0.0.1:8000/api/v1/courses/${id}/`)
-      console.log(data)
+      const { data } = await Axios.get(`http://127.0.0.1:8000/api/v1/courses/${idCourse}/`)
+      setSelectedCourse(data);
     };
     fetchCourse();
-  }, [id]);
-
+  }, [idCourse]);
+  
   return (
     <div>
       <Header />
-      <Summary />
+      <Summary dataCourse={selectedCourse}/>
       <Temary />
       <AboutCourse />
       <ProjectsCourse />

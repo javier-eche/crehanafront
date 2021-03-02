@@ -10,14 +10,16 @@ interface Props {
 }
 
 const Home: React.FC<Props>  = ({data}) => {
-  //const categories = [...new Set(data.map(course => course.category))];
   const categories = Array.from(new Set(data.map(course => course.category)));
+  const subcategories = Array.from(new Set(data.map(course => course.subcategory)));
+  const levels = Array.from(new Set(data.map(course => course.level)));
+  const prices = Array.from(new Set(data.map(course => course.price)));
   return (
     <div>
       <Header />
       <Banner />
       <Categories categories={categories}/>
-      <SearchBy />
+      <SearchBy categories={categories} subcategories={subcategories} levels={levels} prices={prices}/>
       <ContainerCards data={data} />
     </div>
   );

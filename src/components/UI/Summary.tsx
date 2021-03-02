@@ -6,14 +6,19 @@ import urlIconMoon from './../../assets/images/moon.svg';
 import urlIconNavigation from './../../assets/images/navigation-2.svg';
 import urlIconPlay from './../../assets/images/play_icon.svg'
 
-const Summary = () => {
+interface Props {
+  dataCourse:any,
+}
+
+const Summary: React.FC<Props> = ({ dataCourse }) => {
+  const {id, name, level, users, score, price, real_price} = dataCourse;
   return (
     <div className="flex">
       <div className="w-3/5 pr-32">
-        <h2 className="text-4xl font-black">Title H2 - Nombre del curso</h2>
+        <h2 className="text-4xl font-black">{name}</h2>
         <p className="mt-6 leading-6">Body 3- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id mi, mauris aliquam phasellus quis semper diam fringilla. Nunc nullam est in non. Enim sapien amet ut pharetra. Purus sagittis est felis sapien in. Auctor tellus, in mauris mi, facilisi arcu sedut.</p>
         <div className="w-56 mt-6">
-          <Statistics />
+          <Statistics level={level} users={users} score={score} />
         </div> 
         <div className="flex items-center mt-10 gap-4">
           <div className="w-16 h-16 bg-gray-200 rounded-lg"></div>
@@ -46,11 +51,11 @@ const Summary = () => {
           <div className="flex justify-center items-center pix-5">
             <div className="flex items-center">
               <p className="text-2xl font-extrabold">co</p>
-              <p className="text-sxl font-extrabold">$349,929</p>
+              <p className="text-sxl font-extrabold">${price}</p>
             </div>
-            <p className="text-2xl font-normal text-gray-400">CO$164.434</p>                
+            <p className="text-2xl font-normal text-gray-400">CO${real_price}</p>                
           </div>
-          <Link to="/checkout">
+          <Link to={{pathname:`/checkout/${id}`}}>
             <div className="flex flex-col mx-4">
               <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3.5 rounded">Comprar ahora</button>
             </div>
