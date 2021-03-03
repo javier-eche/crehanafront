@@ -21,7 +21,6 @@ const Categories: React.FC<Props> = ({categories}) => {
         })}
 
       </div>
-      <PaginationCategories />
     </div>
   );
 }
