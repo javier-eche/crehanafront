@@ -16,7 +16,10 @@ const Card: React.FC<Props> = ({id, name, level, users, score, price, real_price
   return (
     <div className="my-1 px-1 w-full md:w-1/3 lg:my-4 lg:w-1/4">
         <div className="overflow-hidden rounded-lg shadow-lg">
-          <img alt="Placeholder" className="block h-auto w-full" src="https://picsum.photos/600/400/?random" />
+          <div className="relative">
+            <img alt="Placeholder" className="block h-auto w-full" src="https://picsum.photos/600/400/?random" />
+            <div className="absolute top-2 left-2 flex justify-center items-center w-20 h-6 bg-gray-500 rounded-lg"><p className="text-white text-xs font-bold">TAG VENTA</p></div>           
+          </div>
           <div className="flex flex-col leading-tight p-2 md:p-4">
             <h1 className="text-base font-bold mt-1">{name}</h1>
             <p className="text-sm mt-0.5">Profesor del curso</p>
