@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Card from './Card';
-import PaginationCategories from './PaginationCategories';
+import PaginationCourses from './PaginationCourses';
 
 interface Props {
   data: any[],
@@ -13,8 +13,8 @@ const ContainerCards: React.FC<Props>   = ({data}) => {
   const [coursesPerPage, setCoursesPerPage] = useState(12)
 
   const indexOfLastCourse = currentPage * coursesPerPage;
-  const indexOfFirstPost = indexOfLastCourse - coursesPerPage;
-  const currentCourses = courses.slice(indexOfFirstPost, indexOfLastCourse);
+  const indexOfFirstCourse = indexOfLastCourse - coursesPerPage;
+  const currentCourses = courses.slice(indexOfFirstCourse, indexOfLastCourse);
 
   const paginate = (pageNumber:number) => setCurrentPage(pageNumber)
 
@@ -27,7 +27,7 @@ const ContainerCards: React.FC<Props>   = ({data}) => {
         })}        
       </div>
       <div className="w-full flex flex-row-reverse">
-        <PaginationCategories coursesPerPage={coursesPerPage} totalCourses={courses.length} paginate={paginate} />
+        <PaginationCourses coursesPerPage={coursesPerPage} totalCourses={courses.length} paginate={paginate} />
       </div>
     </div>
   );

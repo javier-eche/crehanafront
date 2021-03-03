@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '../UI/Banner';
 import Categories from '../UI/Categories';
 import ContainerCards from '../UI/ContainerCards';
+import ContainerCategories from '../UI/ContainerCategories';
 import Header from '../UI/Header';
 import SearchBy from '../UI/SearchBy';
 
@@ -19,6 +20,7 @@ const Home: React.FC<Props>  = ({data}) => {
       <Header />
       <Banner />
       <Categories categories={categories}/>
+      <ContainerCategories categories={categories}/>
       <SearchBy categories={categories} subcategories={subcategories} levels={levels} prices={prices}/>
       <ContainerCards data={data} />
     </div>

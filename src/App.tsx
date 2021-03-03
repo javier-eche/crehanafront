@@ -11,7 +11,7 @@ function App(): JSX.Element {
 
   useEffect(() => {
     const fetchData = async() => {
-      const { data } = await Axios.get("http://127.0.0.1:8000/api/v1/courses/");
+      const { data } = await Axios.get("https://catalogo-courses-back.herokuapp.com/api/v1/courses/");
       setListData(data);
     };
     fetchData();
