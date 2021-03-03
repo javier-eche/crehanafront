@@ -10,7 +10,7 @@ interface Props {
 }
 
 const PaidCourse: React.FC<Props> = ({ dataCourse }) => {
-  const { id, name, level, users, score, price, real_price, discount } = dataCourse;
+  const { name, level, users, score, price, real_price, discount } = dataCourse;
 
   return (
     <div className="flex flex-col sm:flex-row-reverse sm:justify-between">
@@ -30,7 +30,7 @@ const PaidCourse: React.FC<Props> = ({ dataCourse }) => {
         </div>
       </div>
       <h3 className="text-sxl font-black sm:hidden">Resumen</h3>
-      <div className="bg-gray-lighter px-4 sm:px-16 sm:w-3/6">
+      <div className="bg-gray-lighter px-4 sm:px-16 sm:w-3/6 sm:pt-10">
         <div className="flex flex-col mt-4 sm:flex-row sm:mt-45">
           <div className="w-32 h-24 sm:w-44 sm:h-28 rounded-lg bg-gray mr-6"></div>
           <div className="flex flex-col justify-center gap-2">

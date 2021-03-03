@@ -16,7 +16,9 @@ const ContainerCards: React.FC<Props>   = ({data}) => {
   const indexOfFirstCourse = indexOfLastCourse - coursesPerPage;
   const currentCourses = courses.slice(indexOfFirstCourse, indexOfLastCourse);
 
-  const paginate = (pageNumber:number) => setCurrentPage(pageNumber)
+  const paginate = (pageNumber:number) => {
+    pageNumber >= 1 ? setCurrentPage(pageNumber) : setCurrentPage(1)
+  }
 
   return (
     <div className="container my-12 mx-auto">
@@ -27,7 +29,7 @@ const ContainerCards: React.FC<Props>   = ({data}) => {
         })}        
       </div>
       <div className="w-full flex flex-row-reverse">
-        <PaginationCourses coursesPerPage={coursesPerPage} totalCourses={courses.length} paginate={paginate} />
+        <PaginationCourses coursesPerPage={coursesPerPage} totalCourses={courses.length} paginate={paginate} currentPage={currentPage}/>
       </div>
     </div>
   );

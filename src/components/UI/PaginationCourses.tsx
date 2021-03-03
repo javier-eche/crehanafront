@@ -6,9 +6,10 @@ interface Props {
   coursesPerPage: number,
   totalCourses: number,
   paginate:any;
+  currentPage:number
 }
 
-const PaginationCourses: React.FC<Props> = ({ coursesPerPage, totalCourses, paginate }) => {
+const PaginationCourses: React.FC<Props> = ({ coursesPerPage, totalCourses, paginate , currentPage}) => {
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalCourses / coursesPerPage); i++) {
@@ -16,8 +17,8 @@ const PaginationCourses: React.FC<Props> = ({ coursesPerPage, totalCourses, pagi
   }
 
   return (
-    <div className="flex items-center">
-      <div className="w-12 h-12 flex justify-center items-center rounded-lg border-2 border-gray-300 mr-10">
+    <div className="flex items-center mt-10">
+      <div onClick={() => paginate(currentPage-1)} className="w-12 h-12 flex justify-center items-center rounded-lg border-2 border-gray-300 mr-10">
         <img src={urlIconRigth} alt=""/>
       </div>
       <p className="text-gray-300">Pagina</p>
@@ -27,7 +28,7 @@ const PaginationCourses: React.FC<Props> = ({ coursesPerPage, totalCourses, pagi
         })}
       </select>
       <p className="text-gray-300">de {pageNumbers.length}</p>
-      <div className="w-12 h-12 flex justify-center items-center rounded-lg border-2 border-gray-300 ml-10">
+      <div onClick={() => paginate(currentPage+1)} className="w-12 h-12 flex justify-center items-center rounded-lg border-2 border-gray-300 ml-10">
       <img src={urlIconLeft} alt=""/>
       </div>
     </div>

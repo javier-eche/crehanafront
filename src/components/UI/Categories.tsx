@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import urlIconCategory from "./../../assets/images/icon-2.svg";
 
 interface Props {

@@ -1,4 +1,4 @@
-import react, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Axios from 'axios';
 import AboutCourse from '../UI/AboutCouse';
 import Header from '../UI/Header';
@@ -18,21 +18,21 @@ const Details: React.FC<Props> = ({match}) => {
 
   useEffect(() => {
     const fetchCourse = async() => {
-      const { data } = await Axios.get(`http://127.0.0.1:8000/api/v1/courses/${idCourse}/`)
+      const { data } = await Axios.get(`https://catalogo-courses-back.herokuapp.com/api/v1/courses/${idCourse}/`)
       setSelectedCourse(data);
     };
     fetchCourse();
   }, [idCourse]);
   
   return (
-    <div>
+    <>
       <Header />
       <Summary dataCourse={selectedCourse}/>
       <Temary />
       <AboutCourse />
-      <ProjectsCourse />
+      <ProjectsCourse username={selectedCourse.username}/>
       <Ratings />
-    </div>
+    </>
   );
 }
 

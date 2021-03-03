@@ -29,8 +29,8 @@ const Temary = () =>{
           <li>Selecciona tu Red Social</li>
         </ol>
       </div>
-      <div className="flex">
-        <p>Textlink</p>
+      <div className="flex gap-2">
+        <p className="font-extrabold">Textlink</p>
         <img src={urlIconArrow} alt=""/>
       </div>
     </div>

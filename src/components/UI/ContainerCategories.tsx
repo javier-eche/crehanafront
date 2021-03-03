@@ -16,7 +16,7 @@ const ContainerCategories: React.FC<Props> = ({categories}) => {
     const currentCategories = categories.slice(indexOfFirstCategory, indexOfLastCategory)
 
     const paginateCategories = (pageNumber:number) => {
-        setCurrentPage(pageNumber)
+      pageNumber >= 1 ? setCurrentPage(pageNumber) : setCurrentPage(1)
     }
 
   return (
