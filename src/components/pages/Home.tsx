@@ -21,8 +21,7 @@ const Home: React.FC<Props>  = ({data}) => {
       <Banner />
       <Categories categories={categories}/>
       <ContainerCategories categories={categories}/>
-      <SearchBy categories={categories} subcategories={subcategories} levels={levels} prices={prices}/>
-      <ContainerCards data={data} />
+      <SearchBy categories={categories} subcategories={subcategories} levels={levels} prices={prices} data={data}/>
     </div>
   );
 }

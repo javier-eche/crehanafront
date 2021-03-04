@@ -1,25 +1,33 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from './Card';
 import PaginationCourses from './PaginationCourses';
 
 interface Props {
-  data: any[],
+  dataa: any[],
 }
 
-const ContainerCards: React.FC<Props>   = ({data}) => {
+const ContainerCards: React.FC<Props>   = ({dataa}) => {
 
-  const [courses, setCourses] = useState(data);
+  console.log(dataa)
+
+  const [courses, setCourses] = useState(dataa);
   const [currentPage, setCurrentPage] = useState(1);
   const [coursesPerPage, setCoursesPerPage] = useState(12)
 
   const indexOfLastCourse = currentPage * coursesPerPage;
   const indexOfFirstCourse = indexOfLastCourse - coursesPerPage;
+  console.log(courses)
   const currentCourses = courses.slice(indexOfFirstCourse, indexOfLastCourse);
 
   const paginate = (pageNumber:number) => {
     pageNumber >= 1 ? setCurrentPage(pageNumber) : setCurrentPage(1)
   }
 
+  useEffect(() => {
+    setCourses(dataa)
+  },[dataa])
+
+  console.log(currentCourses)
   return (
     <div className="container my-12 mx-auto">
       <div className="flex flex-wrap -mx-1 lg:-mx-4">
