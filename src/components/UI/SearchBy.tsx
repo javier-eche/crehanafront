@@ -32,11 +32,9 @@ const SearchBy: React.FC<Props> = ({ categories, subcategories, levels, prices, 
     const c = filterLevel(b);
     const d = filterPrice(c);
     setCurrentData(d)
-    console.log(currentData)
   }
 
   const filterCategory = (data: any[]) => {
-    // eslint-disable-next-line array-callback-return
     return data.filter(course => {
       if (!(currentCategory === "" || currentCategory === "Todos")) {
         if (currentCategory === course.category) {
@@ -45,11 +43,11 @@ const SearchBy: React.FC<Props> = ({ categories, subcategories, levels, prices, 
       } else {
         return course
       }
+      return false;
     })
   }
 
   const filterSubcategory = (a: any[]) => {
-    // eslint-disable-next-line array-callback-return
     return a.filter(course => {
       if (!(currentSubcategory === "" || currentSubcategory === "Todos")) {
         if (currentSubcategory === course.subcategory) {
@@ -58,11 +56,11 @@ const SearchBy: React.FC<Props> = ({ categories, subcategories, levels, prices, 
       } else {
         return course
       }
+      return false;
     })
   }
 
   const filterLevel = (b: any[]) => {
-    // eslint-disable-next-line array-callback-return
     return b.filter(course => {
       if (!(currentLevel === "" || currentLevel === "Todos")) {
         if (currentLevel === course.level) {
@@ -71,11 +69,11 @@ const SearchBy: React.FC<Props> = ({ categories, subcategories, levels, prices, 
       } else {
         return course
       }
+      return false;
     })
   }
 
   const filterPrice = (c: any[]) => {
-    // eslint-disable-next-line array-callback-return
     return c.filter(course => {
       if (!(currentprice.toString() === "0" || currentprice.toString() === "Todos")) {
         if (currentprice === course.price) {
@@ -84,6 +82,7 @@ const SearchBy: React.FC<Props> = ({ categories, subcategories, levels, prices, 
       } else {
         return course
       }
+      return false;
     })
   }
 
