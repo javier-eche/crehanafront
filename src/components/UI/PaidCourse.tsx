@@ -4,6 +4,8 @@ import urlImgVisa from './../../assets/images/image9.png';
 import urlImgPaypal from './../../assets/images/image_paypal.png';
 import urlImgPagoEfectivo from './../../assets/images/image_pagoefectivo.png';
 import Statistics from './Statistics';
+import swal from 'sweetalert';
+
 
 interface Props {
   dataCourse: any,
@@ -124,7 +126,7 @@ const PaidCourse: React.FC<Props> = ({ dataCourse }) => {
             <input type="checkbox" id="checkbox-accept" className="h-4 w-4 border rounded mr-2.5" />
             <label htmlFor="checkbox-accept">Acepto expresamente todos los Términos y Condiciones.</label>
           </div>
-          <button type="submit" className="btn__paid bg-dark text-white font-extrabold text-lg rounded mt-4">Comprar ahora</button>
+          <button onClick={() => swal("Thank's You!", "You paid this book!", "success")} type="submit" className="btn__paid bg-dark text-white font-extrabold text-lg rounded mt-4">Comprar ahora</button>
         </form>
         <div className="flex flex-col sm:hidden mt-59">
           <p className="text-xs font-bold">Notas legales</p>
