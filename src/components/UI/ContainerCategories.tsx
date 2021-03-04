@@ -9,7 +9,7 @@ interface Props {
 const ContainerCategories: React.FC<Props> = ({categories}) => {
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [categoriesPerPage, setCategoriesPerPage] = useState(3);
+    const [categoriesPerPage] = useState(3);
 
     const indexOfLastCategory = currentPage * categoriesPerPage;
     const indexOfFirstCategory = indexOfLastCategory - categoriesPerPage;

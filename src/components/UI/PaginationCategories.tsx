@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import urlIconLeft from './../../assets/images/arrow-ios-leftt.svg';
 import urlIconRigth from './../../assets/images/arrow-ios-right.svg';
 

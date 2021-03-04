@@ -12,7 +12,7 @@ const ContainerCards: React.FC<Props>   = ({dataa}) => {
 
   const [courses, setCourses] = useState(dataa);
   const [currentPage, setCurrentPage] = useState(1);
-  const [coursesPerPage, setCoursesPerPage] = useState(12)
+  const [coursesPerPage] = useState(12)
 
   const indexOfLastCourse = currentPage * coursesPerPage;
   const indexOfFirstCourse = indexOfLastCourse - coursesPerPage;
